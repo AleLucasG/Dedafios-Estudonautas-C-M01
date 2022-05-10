@@ -1,47 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Threading; 
+using System.Windows.Forms;
 
-namespace Exe001
+namespace Exe002
 {
-    internal class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Ponto de entrada principal para o aplicativo.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            /*
-             * 1° DESAFIO DO CURSO DE CSHARP, USANDO:
-             * TEMPORIZADOR,
-             * POSIÇÕES ESPECIFICAS,
-             * COR DE LETRA E FUNDO DE TELA.
-             */
-
-            Console.SetCursorPosition(10, 5);
-
-            // PRIMEIRA PARTE
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Thread.Sleep(1000);
-            Console.Write("MEU ");
-            Console.ResetColor();
-
-            // SEGUNDA PARTE
-            Console.ForegroundColor= ConsoleColor.Green;
-            Console.BackgroundColor= ConsoleColor.Yellow;
-            Thread.Sleep(1000);
-            Console.Write("BRASIL ");
-            Console.ResetColor();
-
-            // TERCEIRA PARTE
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.BackgroundColor= ConsoleColor.Green;
-            Thread.Sleep(1000);
-            Console.Write("BRASILEIRO");
-            Thread.Sleep(1000);
-
-            Console.ReadKey();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }
