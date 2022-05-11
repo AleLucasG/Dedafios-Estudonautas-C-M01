@@ -10,19 +10,31 @@ namespace Exe005
     {
         static void Main(string[] args)
         {
-           
-                    Console.Write("Em que ano você nasceu: ");
-                    int anoNasc = Convert.ToInt16(Console.ReadLine());
-                    Console.WriteLine("------------------------------");
+            
+            try // Como mostrar mensagem de erro?
+            {
+                Console.Write("Em que ano você nasceu: ");
+                int anoNasc = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("------------------------------");
 
-                    int anoAtual = DateTime.Now.Year;
-                    Console.WriteLine($"Estamos atualmente no ano de {anoAtual}.");
+                int anoAtual = DateTime.Now.Year;
+                Console.WriteLine($"Estamos atualmente no ano de {anoAtual}.");
 
-                    int idade = anoAtual - anoNasc;
-                    Console.WriteLine($"Se você nasceu em {anoNasc}, em {anoAtual} vai ter {idade} anos.");
+                int idade = anoAtual - anoNasc;
+                Console.WriteLine($"Se você nasceu em {anoNasc}, em {anoAtual} vai ter {idade} anos.");
 
-                    Console.ReadKey();
-                 
+                Console.ReadKey();
+            }
+            catch (Exception)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("VOCÊ DIGITOU O ANO DE NASCIMENTO ERRADO.");
+                Console.WriteLine("TENTE NOVAMENTE. \nDIGITE O ANO DE NASCIMENTO COM 4 DIGITOS.");
+                
+                Console.ReadKey();
+                Console.Clear();
+            }
+
         }
     }
 }
