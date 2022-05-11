@@ -3,45 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Threading; 
 
-namespace Exe001
+namespace Exe003
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            /*
-             * 1° DESAFIO DO CURSO DE CSHARP, USANDO:
-             * TEMPORIZADOR,
-             * POSIÇÕES ESPECIFICAS,
-             * COR DE LETRA E FUNDO DE TELA.
-             */
+            // Primeira parte: Convertendo a entrada de dados
+            float num;
+            Console.Write("Digite um número Real: ");
+            float.TryParse(Console.ReadLine(), out num);
+            Console.WriteLine("----------------------------------");
 
-            Console.SetCursorPosition(10, 5);
+            // Segunda parte: Entrada de dados com 3 casas decimais
+            Console.WriteLine($"Você digitou o valor {num:C3}");
 
-            // PRIMEIRA PARTE
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Thread.Sleep(1000);
-            Console.Write("MEU ");
-            Console.ResetColor();
+            // Terceira parte: Conversão Explicita usando Cast
+            int num1 = (int)num;
+            Console.WriteLine($"A parte inteira do número é {num1}");
 
-            // SEGUNDA PARTE
-            Console.ForegroundColor= ConsoleColor.Green;
-            Console.BackgroundColor= ConsoleColor.Yellow;
-            Thread.Sleep(1000);
-            Console.Write("BRASIL ");
-            Console.ResetColor();
+            // Quarta parte: Conversão Classe Auxiliar
+            int num2 = Convert.ToInt16(num);
+            Console.WriteLine("Arredondando temos o numero " + num2);
+          
+            Console.ReadLine();
 
-            // TERCEIRA PARTE
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.BackgroundColor= ConsoleColor.Green;
-            Thread.Sleep(1000);
-            Console.Write("BRASILEIRO");
-            Thread.Sleep(1000);
-
-            Console.ReadKey();
         }
     }
 }
