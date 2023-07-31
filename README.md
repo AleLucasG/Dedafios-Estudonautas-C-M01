@@ -2,9 +2,9 @@
 5 exercícios (desafios) em C# 
 
  1° DESAFIO DO CURSO DE CSHARP, USANDO:
- - TEMPORIZADOR,
- - POSIÇÕES ESPECIFICAS,
- - COR DE LETRA E FUNDO DE TELA.
+ - Temporizador.
+ - Posiçoes especificas.
+ - Cor de letra e fundo de tela.
 
 2º DESAFIO - WINDONS FORM
 -
